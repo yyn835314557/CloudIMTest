@@ -56,7 +56,7 @@
         <scene sceneID="1U6-5S-cTf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZV-ES-iPP" customClass="conver" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="会话" id="Fcl-eL-lit"/>
+                    <tabBarItem key="tabBarItem" title="会话" image="coversation-1" badgeValue="12" selectedImage="coversation-1" id="Fcl-eL-lit"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="iIW-hG-bpC">
@@ -73,4 +73,7 @@
             <point key="canvasLocation" x="-298" y="-786"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coversation-1" width="29" height="22"/>
+    </resources>
 </document>

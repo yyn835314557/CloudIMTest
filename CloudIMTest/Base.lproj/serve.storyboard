@@ -27,7 +27,7 @@
         <scene sceneID="9uo-oE-ljS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a97-Os-k0m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="客服" id="cMq-52-lvn"/>
+                    <tabBarItem key="tabBarItem" title="客服" image="serve-1" selectedImage="serve-1" id="cMq-52-lvn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="B82-sg-7MW">
@@ -41,7 +41,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRm-LS-V9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-298" y="574"/>
+            <point key="canvasLocation" x="-400" y="516"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="serve-1" width="23" height="22"/>
+    </resources>
 </document>

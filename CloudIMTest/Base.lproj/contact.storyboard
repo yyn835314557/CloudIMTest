@@ -27,7 +27,7 @@
         <scene sceneID="fzH-C3-BK2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lRO-jA-8rH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="通讯录" id="sPU-di-au6"/>
+                    <tabBarItem key="tabBarItem" title="通讯录" image="contact-1" badgeValue="新增" selectedImage="contact-1" id="sPU-di-au6"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="CMR-Ot-jv2">
@@ -44,4 +44,7 @@
             <point key="canvasLocation" x="-298" y="-87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="contact-1" width="31" height="21"/>
+    </resources>
 </document>

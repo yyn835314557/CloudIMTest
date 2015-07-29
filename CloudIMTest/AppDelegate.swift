@@ -66,11 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,RCIMUserInfoDataSource {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-       
-//        RCIM.sharedRCIM().initWithAppKey("k51hidwq1mfsb", deviceToken:tokenCache)
-        
-        
+        //        RCIM.sharedRCIM().initWithAppKey("k51hidwq1mfsb", deviceToken:tokenCache)
         // 设置用户信息提供者为自己 AppDelegate
         RCIM.sharedRCIM().userInfoDataSource = self
         

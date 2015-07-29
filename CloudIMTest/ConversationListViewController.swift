@@ -22,10 +22,10 @@ class ConversationListViewController: RCConversationListViewController {
 //            ])
 //        
         let items = [
-            MenuItem(title: "客服", iconName: "", glowColor: UIColor.redColor(), index: 0),
-            MenuItem(title: "与游义男1聊天", iconName: "", glowColor: UIColor.blueColor(), index: 1),
-            MenuItem(title: "通讯录", iconName: "", glowColor: UIColor.yellowColor(), index: 2),
-            MenuItem(title: "关于", iconName: "", glowColor: UIColor.grayColor(), index: 3)
+            MenuItem(title: "客服", iconName: "server.jpg", glowColor: UIColor.redColor(), index: 0),
+            MenuItem(title: "与游义男1聊天", iconName: "conversation.jpg", glowColor: UIColor.blueColor(), index: 1),
+            MenuItem(title: "通讯录", iconName: "server.jpg", glowColor: UIColor.yellowColor(), index: 2),
+            MenuItem(title: "关于", iconName: "settings.jpg", glowColor: UIColor.grayColor(), index: 3)
         ]
         let menu = PopMenu(frame: self.view.bounds, items: items)
         menu.menuAnimationType = PopMenuAnimationType.NetEase
