@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AJWValidator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSAnimatedImagesView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,32 +47,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>467A6F97B12EF568181088D1F104CDA9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>594C1FF78078284E9AED5591107305C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>63BD97E60F98257E518433764695675E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>864DBCFCCC770F6E8FEDC054A041FE29</key>
+		<key>9B7079F8CCCA4FEC05E36BFF7B8F0BC4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87043E5CBFD40FFE0A063AC3D2615D37</key>
+		<key>A5BD04688E215337D20F760DC6014B47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD1A7E1E7EA008957F62C2C7AFF0B731</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>AF7B3A741EBCD42A06BF6EC744D3D819</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B82F5A9D31FA4BA9E15CBB747B3549FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CED8F3A2D66781B524576F94475F7087</key>
 		<dict>
 			<key>primary</key>
 			<true/>

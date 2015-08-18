@@ -28,7 +28,7 @@ class LoginViewController: UIViewController,RCAnimatedImagesViewDelegate {
         // Do any additional setup after loading the view.
         self.wallpaperImageView.delegate = self
         self.wallpaperImageView.startAnimating()
-    }
+           }
     
     func animatedImagesNumberOfImages(animatedImagesView: RCAnimatedImagesView!) -> UInt {
         return 3
@@ -38,6 +38,13 @@ class LoginViewController: UIViewController,RCAnimatedImagesViewDelegate {
         return UIImage(named: "image\(index + 1)")
     }
 
+    override func viewWillAppear(animated: Bool) {
+        //现调用super
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
+
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

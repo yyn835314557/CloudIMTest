@@ -13,11 +13,25 @@
 ### 私聊UI
 	RCConversationUIViewController
 ##3.私聊对象信息
-	targetId
-	userName
-	conversationType
-	导航标题title
-	
+* targetId
+* userName
+* conversationType
+* 导航标题title
+* 用户注册的UI布局和约束(UIStackView)
+	 - 自定义segue(给identifier起个名字) 从页面进入口拉一个segue
+	 - UITableView来写登录界面，切割storyboard，UIStackView
+	 - 一次性定位所有指定的控件
+	 	 － [UIKitConvenience](https://github.com/egold/UIKitConvenience)使用这个第三方框架的UIView+ViewRecursion文件的runBlockOnAllSubviews方法
+	 	 － IBOutlet Collection (推荐使用)
+	 - HUD组件
+	 	 - [swiftNotice](https://github.com/johnlui/SwiftNotice)引用这个组件的方法 `self.errorNotice("必填项目为空")`
+	 - 炫酷动画文本框
+	 	 - [UITextBox]()
+	 - 输入校验证
+	 	 - 长度，范围，合法性 常规操作 NSPredicate(谓词) 正则表达式
+	 - 第三方验证库
+	 	 - [AJWValidator](https://github.com/adamwaite/AJWValidator)
+	 - `pod update --no-repo-update` (不读取cocoapods库列表,加快更新速度)
 融云中的token:{"code":200,"userId":"youyinan1","token":"bTkovYNtiHEOBc828EN2Lt69amEBkQ8PAKgSfjyNLVVG1Kc310tHOsAJx0GUQImaYOTWmm0r3EylBUtdAyBs54sGVabxr1S8"}
 
 # 用户信息提供者
