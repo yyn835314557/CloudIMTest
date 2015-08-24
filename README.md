@@ -32,9 +32,9 @@
 	 - 第三方验证库
 	 	 - [AJWValidator](https://github.com/adamwaite/AJWValidator)
 	 - 云存储,可以离线存储(本地数据存在服务器上面，优点：不用搭建服务器使用接口，加速访问)
-	 	 - [AVOSCloud](https://leancloud.cn/docs/ios_os_x_guide.html#介绍)
+	 	 - [AVOSCloud](https://github.com/leancloud/LeanMessage-Demo)
 
-Note: 可以使用`pod update --no-repo-update` (不读取cocoapods库列表,加快更新速度)
+Note: 可以使用`pod update --verbose --no-repo-update` (不读取cocoapods库列表,加快更新速度)
 
 融云中的token:{"code":200,"userId":"youyinan1","token":"bTkovYNtiHEOBc828EN2Lt69amEBkQ8PAKgSfjyNLVVG1Kc310tHOsAJx0GUQImaYOTWmm0r3EylBUtdAyBs54sGVabxr1S8"}
 
