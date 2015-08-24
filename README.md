@@ -31,7 +31,11 @@
 	 	 - 长度，范围，合法性 常规操作 NSPredicate(谓词) 正则表达式
 	 - 第三方验证库
 	 	 - [AJWValidator](https://github.com/adamwaite/AJWValidator)
-	 - `pod update --no-repo-update` (不读取cocoapods库列表,加快更新速度)
+	 - 云存储,可以离线存储(本地数据存在服务器上面，优点：不用搭建服务器使用接口，加速访问)
+	 	 - [AVOSCloud](https://leancloud.cn/docs/ios_os_x_guide.html#介绍)
+
+Note: 可以使用`pod update --no-repo-update` (不读取cocoapods库列表,加快更新速度)
+
 融云中的token:{"code":200,"userId":"youyinan1","token":"bTkovYNtiHEOBc828EN2Lt69amEBkQ8PAKgSfjyNLVVG1Kc310tHOsAJx0GUQImaYOTWmm0r3EylBUtdAyBs54sGVabxr1S8"}
 
 # 用户信息提供者
@@ -46,6 +50,7 @@ RCIMUserInfoDataSource
 ![图片2](/Resouce/屏幕快照 2015-07-29 12.21.01.png)
 ![图片2](/Resouce/屏幕快照 2015-08-18 19.40.32.png)
 ![图片2](/Resouce/屏幕快照 2015-08-18 19.40.52.png)
+![后台1](/Resouce/屏幕快照 2015-08-24 10.30.11.png)
 ***
 
 1.登录界面:背景图片可以滚动
@@ -53,3 +58,4 @@ RCIMUserInfoDataSource
 3.具体的对话:
 4.点击右上角加➕出现动画
 5.对输入框输入的信息进行校验
+6.在LeanCloud服务器上面存储的用户信息

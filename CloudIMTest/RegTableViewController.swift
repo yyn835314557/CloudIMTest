@@ -14,6 +14,8 @@ class RegTableViewController: UITableViewController {
 //    var (userOk,passOk,mailOk) = (false,false,false)
     var possibleInputs :Inputs = []
     
+    var doneButton :UIBarButtonItem?
+    
     @IBOutlet var loginTextFields: [UITextField]!
     @IBOutlet weak var answer: UITextBox!
     @IBOutlet weak var question: UITextBox!
@@ -76,7 +78,7 @@ class RegTableViewController: UITableViewController {
          self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "doneButtonTap")
         
         self.navigationItem.rightBarButtonItem?.enabled = false
-        let doneButton = self.navigationItem.rightBarButtonItem
+        doneButton = self.navigationItem.rightBarButtonItem
         
 //        let rightLabel = UILabel(frame: CGRectMake(0, 0, 100, 30))
 //        rightLabel.text = user.placeholder
@@ -103,7 +105,7 @@ class RegTableViewController: UITableViewController {
                 self.user.highlightState = UITextBoxHighlightState.Warning("Warning")
             }
 //            doneButton?.enabled = self.userOk && self.passOk && self.mailOk
-            doneButton?.enabled = self.possibleInputs.boolValue
+            self.doneButton?.enabled = self.possibleInputs.boolValue
         }
         
         let v2 = AJWValidator(type: AJWValidatorType.String)
@@ -123,7 +125,7 @@ class RegTableViewController: UITableViewController {
                 self.possibleInputs.subtractInPlace(Inputs.pass)
             }
 //            doneButton?.enabled = self.userOk && self.passOk && self.mailOk
-            doneButton?.enabled = self.possibleInputs ? true :false
+            self.doneButton?.enabled = self.possibleInputs ? true :false
         }
         
         let v3 = AJWValidator(type: AJWValidatorType.String)
@@ -142,15 +144,52 @@ class RegTableViewController: UITableViewController {
                 self.possibleInputs.subtractInPlace(Inputs.mail)
             }
 //            doneButton?.enabled = self.userOk && self.passOk && self.mailOk
-             doneButton?.enabled = self.possibleInputs.isAllOK()
+             self.doneButton?.enabled = self.possibleInputs.isAllOK()
         }
         
     }
     
+    // 注册新用户
     func doneButtonTap(){
 //       checkRequiredField()
-        // 注册新用户
+        // 显示载入提示
+        self.pleaseWait();
+        // 建立用户的AVobject
+         let user = AVObject(className: "XBUser")
+        // 把输入的文本框的值，设置到对象中
+        user["user"] = self.user.text
+        user["pass"] = self.pass.text
+        user["mail"] = self.mail.text
+        user["region"] = self.region.text
+        user["question"] = self.question.text
+        user["answer"] = self.answer.text
         
+        //查询用户是否已经注册
+        let query = AVQuery(className: "XBUser")
+        query.whereKey("user", equalTo: self.user.text)
+        // 执行查询
+        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+            
+            self.clearAllNotice()
+            // 查询到相关用户
+            if object != nil{
+
+                self.errorNotice(" 该用户已经注册")
+                // 改变光标焦点
+                self.user.becomeFirstResponder()
+                self.doneButton?.enabled = false
+            }else{
+                //self.successNotice("用户未注册")
+                user.saveInBackgroundWithBlock({ (succeed, e) -> Void in
+                    if succeed {
+                        self.successNotice("注册成功")
+                        self.navigationController?.popViewControllerAnimated(true)
+                    }else{
+                        self.errorNotice(e.localizedDescription)
+                    }
+                })
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
